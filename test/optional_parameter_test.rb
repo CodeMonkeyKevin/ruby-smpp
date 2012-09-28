@@ -12,7 +12,7 @@ class OptionalParameterTest < Test::Unit::TestCase
   end
 
   def test_bad_data_does_not_puke
-    assert_raise RuntimeError do
+    assert_nothing_raised RuntimeError do
       OptionalParameter.from_wire_data("")
     end
   end
