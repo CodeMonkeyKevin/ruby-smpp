@@ -1,25 +1,6 @@
 require File.expand_path('../config/environment', __FILE__)
 require 'rake'
 
-begin
-  require 'jeweler'
-  Jeweler::Tasks.new do |gem|
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
-    gem.name = "anjlab-ruby-smpp"
-    gem.summary = %Q{Ruby implementation of the SMPP protocol, based on EventMachine.}
-    gem.description = gem.summary + " SMPP is a protocol that allows ordinary people outside the mobile network to exchange SMS messages directly with mobile operators."
-    gem.email = "raykrueger@gmail.com"
-    gem.homepage = "http://github.com/raykrueger/ruby-smpp"
-    gem.authors = ["Ray Krueger", "August Z. Flatby"]
-    gem.rubyforge_project = gem.name
-
-    gem.extra_rdoc_files = ["README.rdoc", "CHANGELOG", "CONTRIBUTORS.txt"]
-  end
-  Jeweler::GemcutterTasks.new
-rescue LoadError
-  puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
-end
-
 require 'rake/testtask'
 Rake::TestTask.new(:test) do |test|
   test.libs << 'lib' << 'test'
